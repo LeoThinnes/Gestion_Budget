@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Gestion_Budget.iml" filepath="$PROJECT_DIR$/.idea/Gestion_Budget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GestionBudget.iml" filepath="$PROJECT_DIR$/.idea/modules/GestionBudget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GestionBudget.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GestionBudget.app.iml" />
     </modules>
   </component>
 </project>
