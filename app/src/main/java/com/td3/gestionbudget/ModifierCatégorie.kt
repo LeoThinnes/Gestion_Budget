@@ -8,5 +8,6 @@ class ModifierCatégorie : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.modifiercategorie)
+        supportActionBar?.hide()
     }
 }

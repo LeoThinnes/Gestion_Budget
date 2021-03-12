@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestionBudget">
         <activity android:name=".ajouterRevenu"></activity>
+        <activity android:name=".Parametres"></activity>
+        <activity android:name=".DureeDeCycle"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
