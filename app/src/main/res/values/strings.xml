@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GestionBudget</string>
+    <string name="solde">Solde :</string>
+    <string name="valeur">235,78</string>
+    <string name="euro">€</string>
+    <string name="ajoutRevenus">Ajouter des Revenus</string>
+    <string name="ajoutDepenses">Ajouter des Dépenses</string>
+    <string name="detail">Voir le detail.</string>
+    <string name="acces_aux_parametres">acces aux parametres</string>
 </resources>
