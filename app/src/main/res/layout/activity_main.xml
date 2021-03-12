@@ -4,15 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#E0E0E0"
+    tools:context=".MainActivity"
+    android:screenOrientation="portrait">
 
     <TextView
+        android:id="@+id/Solde"
+        android:layout_width="116dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:text="Solde : "
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ValeurSolde"
+        android:layout_width="153dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="235,78"
+        android:textColor="#090000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Solde"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/logoEuro"
+        android:layout_width="33dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="€"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/lienDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ValeurSolde"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/boutonRevenus"
+        android:layout_width="278dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="52dp"
+        android:text="Ajouter des Revenus"
+        android:textColor="#040000"
+        android:textSize="18sp"
+        app:backgroundTint="@color/vert"
+        app:cornerRadius="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/boutonDepenses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/boutonDepenses"
+        android:layout_width="278dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="172dp"
+        android:text="Ajouter des Dépenses"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:backgroundTint="@color/rouge"
+        app:cornerRadius="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/BoutonParametre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="45dp"
+        android:background="#00FFFFFF"
+        android:cropToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boutonDepenses"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/settings_foreground"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/lienDetail"
+        android:layout_width="92dp"
+        android:layout_height="27dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Voir le detail."
+        android:textColor="@color/lien"
+        app:layout_constraintBottom_toTopOf="@+id/boutonRevenus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <view
+        android:id="@+id/view"
+        class="androidx.drawerlayout.widget.DrawerLayout"
+        android:layout_width="320dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="12dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/boutonRevenus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ValeurSolde"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
