@@ -7,10 +7,10 @@ import android.widget.ArrayAdapter
 import android.widget.ImageButton
 import android.widget.Spinner
 
-class ajouterRevenu : AppCompatActivity() {
+class ajoutDepenses : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ajouter_revenu)
+        setContentView(R.layout.activity_ajout_depenses)
         supportActionBar?.hide()
 
         val boutonAjouterCatégorie = findViewById<ImageButton>(R.id.boutonAjouterCategorie)
@@ -28,7 +28,6 @@ class ajouterRevenu : AppCompatActivity() {
 
         spinner.adapter=adapter
 
-
         boutonAjouterCatégorie.setOnClickListener {
             val intent = Intent(this, AjouterCatégorie::class.java)
             startActivity(intent)
@@ -38,7 +37,5 @@ class ajouterRevenu : AppCompatActivity() {
             val intent = Intent(this, ModifierCatégorie::class.java)
             startActivity(intent)
         }
-
     }
-
 }

@@ -8,7 +8,7 @@
     tools:context=".DureeDeCycle">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textCategorie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textNote"
         android:layout_width="197dp"
         android:layout_height="57dp"
         android:layout_marginStart="104dp"

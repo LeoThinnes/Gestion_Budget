@@ -7,4 +7,10 @@
     <string name="ajoutDepenses">Ajouter des Dépenses</string>
     <string name="detail">Voir le detail.</string>
     <string name="acces_aux_parametres">acces aux parametres</string>
+    <string name="nouveau_revenu"><u>Nouveau Revenu :</u></string>
+    <string name="montant">Montant :</string>
+    <string name="categorie">Catégorie :</string>
+    <string name="note">Note :</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="nouvelle_depense"><u>Nouvelle Dépense :</u></string>
 </resources>

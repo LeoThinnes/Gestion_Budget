@@ -14,10 +14,16 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         val boutonRevenu = findViewById<Button>(R.id.boutonRevenus)
+        val boutonDepenses = findViewById<Button>(R.id.boutonDepenses)
         val boutonParametres = findViewById<ImageButton>(R.id.BoutonParametre)
 
         boutonRevenu.setOnClickListener {
             val intent = Intent(this, ajouterRevenu::class.java)
+            startActivity(intent)
+        }
+
+        boutonDepenses.setOnClickListener {
+            val intent = Intent(this, ajoutDepenses::class.java)
             startActivity(intent)
         }
 
