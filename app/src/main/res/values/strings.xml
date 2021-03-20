@@ -2,7 +2,7 @@
     <string name="app_name">GestionBudget</string>
     <string name="solde">Solde :</string>
     <string name="valeur">235,78</string>
-    <string name="euro">€</string>
+    <string name="euros">€</string>
     <string name="ajoutRevenus">Ajouter des Revenus</string>
     <string name="ajoutDepenses">Ajouter des Dépenses</string>
     <string name="detail">Voir le detail.</string>
@@ -13,4 +13,23 @@
     <string name="note">Note :</string>
     <string name="ajouter">Ajouter</string>
     <string name="nouvelle_depense"><u>Nouvelle Dépense :</u></string>
+    <string name="dureeCycle"><u>Durée de cycle :</u></string>
+    <string name="modifierDuree"><u>Modifier la durée de gestion :</u></string>
+    <string name="appliquer">Appliquer</string>
+    <string name="Attention">ATTENTION : votre solde et vos dépenses seront effacés.</string>
+    <string name="textJours">Jours</string>
+    <string name="reinitialiserCycle">Réinitialiser le cycle</string>
+    <string name="txtReinitialiserCycle"><u>Réinitialiser le cycle :</u></string>
+    <string name="ajouterCategorie"><u>Ajouter Catégorie</u></string>
+    <string name="nom">Nom :</string>
+    <string name="description">Description (facultatif) :</string>
+    <string name="modifierCategorie"><u>Modifier Catégorie</u></string>
+    <string name="MenuParametres"><u>Paramètres :</u></string>
+    <string name="btnNotifications">Notifications</string>
+    <string name="btnDureeCycle">Durée de cycle</string>
+    <string name="titreDetail"><u>Détail :</u></string>
+    <string name="revenus">Revenus :</string>
+    <string name="sommeRevenus">520.6</string>
+    <string name="depenses">Dépenses :</string>
+    <string name="sommeDepenses">302.4</string>
 </resources>

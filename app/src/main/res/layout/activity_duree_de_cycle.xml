@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gris"
     tools:context=".DureeDeCycle">
 
     <TextView
         android:id="@+id/textTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="140dp"
-        android:text="Durée de cycle :"
-        android:textSize="40dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/dureeCycle"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,48 +23,103 @@
         android:id="@+id/textCategorie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="240dp"
-        android:text="Modifier la durée de gestion :"
-        android:textSize="20dp"
+        android:layout_marginTop="152dp"
+        android:text="@string/modifierDuree"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnAppliquer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginLeft="144dp"
-        android:layout_marginTop="472dp"
-        android:text="Appliquer"
+        android:layout_width="146dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/appliquer"
+        android:textSize="15sp"
+        app:backgroundTint="@color/grisFoncé"
+        app:cornerRadius="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnReinitialiser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginLeft="96dp"
-        android:layout_marginBottom="128dp"
-        android:text="Réinitialiser le cycle"
-        android:background="@color/rouge"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textCategorie" />
 
     <TextView
         android:id="@+id/textNote"
-        android:layout_width="197dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginBottom="60dp"
-        android:text="ATTENTION : votre solde et vos dépenses seront effacés."
+        android:layout_width="297dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="108dp"
+        android:gravity="center"
+        android:text="@string/Attention"
         android:textColor="@color/rouge"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/dureeCycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnAppliquer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCategorie"
+        app:layout_constraintVertical_bias="0.454"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/textJours"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAppliquer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/dureeCycle"
+        app:layout_constraintTop_toBottomOf="@+id/textCategorie"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnRéinitialiser"
+        android:layout_width="244dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/reinitialiserCycle"
+        android:textSize="15sp"
+        app:backgroundTint="@color/grisFoncé"
+        app:cornerRadius="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/textNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAppliquer"
+        app:layout_constraintVertical_bias="0.844" />
+
+    <TextView
+        android:id="@+id/textRéinitialiser"
+        android:layout_width="268dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="@string/txtReinitialiserCycle"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRéinitialiser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAppliquer"
+        app:layout_constraintVertical_bias="0.864" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

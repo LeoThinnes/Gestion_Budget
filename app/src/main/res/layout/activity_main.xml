@@ -45,7 +45,7 @@
         android:layout_height="58dp"
         android:layout_marginTop="160dp"
         android:gravity="center"
-        android:text="@string/euro"
+        android:text="@string/euros"
         android:textColor="#000000"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/lienDetail"
