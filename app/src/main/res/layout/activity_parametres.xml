@@ -44,5 +44,6 @@
         app:cornerRadius="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitre" />
+        app:layout_constraintTop_toBottomOf="@+id/textTitre"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

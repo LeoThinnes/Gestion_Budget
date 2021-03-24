@@ -32,4 +32,6 @@
     <string name="sommeRevenus">520.6</string>
     <string name="depenses">Dépenses :</string>
     <string name="sommeDepenses">302.4</string>
+    <string name="retour">Retour</string>
+    <string name="modifier">Modifier</string>
 </resources>

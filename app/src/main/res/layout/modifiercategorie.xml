@@ -81,11 +81,11 @@
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/boutonAjouter"
+        android:id="@+id/bouton_modifier"
         android:layout_width="165dp"
         android:layout_height="57dp"
         android:layout_marginBottom="144dp"
-        android:text="@string/ajouter"
+        android:text="@string/modifier"
         android:textSize="15sp"
         app:backgroundTint="@color/grisFoncé"
         app:cornerRadius="15sp"
