@@ -28,12 +28,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textMontany"
-        app:layout_constraintTop_toBottomOf="@+id/textTitre" />
+        app:layout_constraintTop_toBottomOf="@+id/textTitre"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/textMontany"
@@ -92,7 +93,8 @@
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toEndOf="@+id/textCategorie"
         app:layout_constraintTop_toBottomOf="@+id/saisieMontant"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:targetApi="m" />
 
     <EditText
         android:id="@+id/zoneTexte"
@@ -104,10 +106,11 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNote" />
+        app:layout_constraintTop_toBottomOf="@+id/textNote"
+        android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/bouton_modifier"
+        android:id="@+id/bouton_Ajouter"
         android:layout_width="165dp"
         android:layout_height="57dp"
         android:text="@string/ajouter"
@@ -119,7 +122,7 @@
         app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zoneTexte"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.229"/>
 
     <ImageButton
         android:id="@+id/boutonModifier"
@@ -131,7 +134,8 @@
         app:layout_constraintStart_toEndOf="@+id/listeDeroulante"
         app:layout_constraintTop_toBottomOf="@+id/saisieMontant"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        android:contentDescription="@string/bouton_de_modification" />
 
     <ImageButton
         android:id="@+id/boutonAjouterCategorie"
@@ -148,6 +152,7 @@
         app:layout_constraintStart_toStartOf="@+id/boutonModifier"
         app:layout_constraintTop_toBottomOf="@+id/saisieMontant"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@android:drawable/ic_menu_add"
+        android:contentDescription="@string/btn_ajout_categorie" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

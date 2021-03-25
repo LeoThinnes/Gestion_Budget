@@ -3,9 +3,12 @@ package com.td3.gestionbudget
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.td3.gestionbudget.classes.categorie
+import com.td3.gestionbudget.classes.depensesRevenus
 import com.td3.gestionbudget.handler.DatabaseHandler
 import kotlinx.android.synthetic.main.activity_ajout_depenses.*
 
@@ -20,6 +23,7 @@ class ajoutDepenses : AppCompatActivity() {
 
         val boutonAjouterCatégorie = findViewById<ImageButton>(R.id.boutonAjouterCategorie)
         val boutonModifierCatégorie = findViewById<ImageButton>(R.id.boutonModifier)
+        val boutonAjouter = findViewById<Button>(R.id.bouton_Ajouter)
         viewRecord()
 
         boutonAjouterCatégorie.setOnClickListener {
@@ -30,6 +34,10 @@ class ajoutDepenses : AppCompatActivity() {
         boutonModifierCatégorie.setOnClickListener {
             val intent = Intent(this, ModifierCatégorie::class.java)
             startActivity(intent)
+        }
+
+        boutonAjouter.setOnClickListener {
+            ajouterDepense()
         }
     }
 
@@ -45,7 +53,7 @@ class ajoutDepenses : AppCompatActivity() {
         //creating the instance of DatabaseHandler class
         val databaseHandler: DatabaseHandler= DatabaseHandler(this)
         //calling the viewEmployee method of DatabaseHandler class to read the records
-        val categories: List<categorie> = databaseHandler.viewCategoriesRevenu()
+        val categories: List<categorie> = databaseHandler.afficherCategories()
         val ArrayLabel = Array<String>(categories.size){"null"}
         var index = 0
         for(e in categories){
@@ -57,6 +65,32 @@ class ajoutDepenses : AppCompatActivity() {
             ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ArrayLabel)
 
         listeDeroulante.adapter = dataAdapter
+    }
+
+    fun ajouterDepense(){
+        //recupération des données saisies
+        val montant = saisieMontant.text.toString()
+        val categorie = listeDeroulante.selectedItem.toString()
+        val note = zoneTexte.text.toString()
+        val databaseHandler: DatabaseHandler = DatabaseHandler(this)
+        //on controle que les champs nécessaires soient remplis
+        if(montant.trim()!="" && categorie.trim()!="" && note.trim()!=""){
+            //sauvegarde du liver
+            val montantBis = montant.toDouble()
+            val status = databaseHandler.ajouterDepense(depensesRevenus(montantBis,categorie, note))
+
+            if(status > -1){
+                //affichage d'un toast pour signaler que la sauvegarde est bonne
+                Toast.makeText(applicationContext,"depense savegardée", Toast.LENGTH_LONG).show()
+                //remise a vide des champs de saisie
+                saisieMontant.text.clear()
+                zoneTexte.text.clear()
+            }
+        }else{
+            //affichage d'un toast si un champ n'est pas remplis correctement
+            Toast.makeText(applicationContext,"tous les champs doivent etre remplis", Toast.LENGTH_LONG).show()
+        }
+
     }
 
 }

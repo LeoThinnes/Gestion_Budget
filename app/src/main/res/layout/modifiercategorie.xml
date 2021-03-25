@@ -81,7 +81,7 @@
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/bouton_modifier"
+        android:id="@+id/bouton_Ajouter"
         android:layout_width="165dp"
         android:layout_height="57dp"
         android:layout_marginBottom="144dp"

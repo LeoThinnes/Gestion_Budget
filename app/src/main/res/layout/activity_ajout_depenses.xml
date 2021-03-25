@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textNote" />
 
     <Button
-        android:id="@+id/bouton_modifier"
+        android:id="@+id/bouton_Ajouter"
         android:layout_width="165dp"
         android:layout_height="57dp"
         android:text="@string/ajouter"

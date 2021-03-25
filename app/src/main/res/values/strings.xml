@@ -22,7 +22,7 @@
     <string name="txtReinitialiserCycle"><u>Réinitialiser le cycle :</u></string>
     <string name="ajouterCategorie"><u>Ajouter Catégorie</u></string>
     <string name="nom">Nom :</string>
-    <string name="description">Description (facultatif) :</string>
+    <string name="description">Description :</string>
     <string name="modifierCategorie"><u>Modifier Catégorie</u></string>
     <string name="MenuParametres"><u>Paramètres :</u></string>
     <string name="btnNotifications">Notifications</string>
@@ -34,4 +34,6 @@
     <string name="sommeDepenses">302.4</string>
     <string name="retour">Retour</string>
     <string name="modifier">Modifier</string>
+    <string name="bouton_de_modification">bouton de modification</string>
+    <string name="btn_ajout_categorie">btn ajout categorie</string>
 </resources>
