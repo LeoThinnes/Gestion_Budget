@@ -36,4 +36,7 @@
     <string name="modifier">Modifier</string>
     <string name="bouton_de_modification">bouton de modification</string>
     <string name="btn_ajout_categorie">btn ajout categorie</string>
+    <string name="channel_name">nom</string>
+    <string name="channel_description">description</string>
+    <string name="notification_channel_description">oui</string>
 </resources>

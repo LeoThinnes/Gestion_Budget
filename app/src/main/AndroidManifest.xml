@@ -23,6 +23,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true" />
+        <service
+            android:name=".NotificationService"
+            android:enabled="true" />
+        <activity
+            android:name=".ResultActivity"
+            android:excludeFromRecents="true"
+            android:label="notification"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
     </application>
 
 </manifest>
