@@ -1,4 +1,4 @@
-package com.td3.gestionbudget
+package com.td3.Economie.classes
 
 import android.annotation.SuppressLint
 import android.app.*
@@ -10,6 +10,8 @@ import android.media.RingtoneManager
 import android.os.Build
 import java.util.*
 import android.app.NotificationChannel
+import com.td3.Economie.MainActivity
+import com.td3.Economie.R
 
 
 class NotificationService : IntentService("NotificationService") {
@@ -67,7 +69,7 @@ class NotificationService : IntentService("NotificationService") {
 
             val context = this.applicationContext
             var notificationManager: NotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            val notifyIntent = Intent(this, ResultActivity::class.java)
+            val notifyIntent = Intent(this, MainActivity::class.java)
 
             val title = "Rappel"
             val message = "N'oublie pas de rentrer tes dépenses du jours !"

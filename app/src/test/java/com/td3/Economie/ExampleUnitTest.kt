@@ -1,4 +1,4 @@
-package com.td3.gestionbudget
+package com.td3.Economie
 
 import org.junit.Test
 

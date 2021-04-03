@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.td3.gestionbudget">
+    package="com.td3.Economie">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/piece"
         android:supportsRtl="true"
         android:theme="@style/Theme.GestionBudget">
-        <activity android:name=".detail"></activity>
-        <activity android:name=".ajoutDepenses" />
-        <activity android:name=".ajouterRevenu" />
-        <activity android:name=".Parametres" />
-        <activity android:name=".DureeDeCycle" />
-        <activity android:name=".AjouterCatégorie" />
-        <activity android:name=".ModifierCatégorie" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.td3.Economie.detail" />
+        <activity android:name="com.td3.Economie.ajoutDepenses" />
+        <activity android:name="com.td3.Economie.ajouterRevenu" />
+        <activity android:name="com.td3.Economie.Parametres" />
+        <activity android:name="com.td3.Economie.ReinitaliserDonnees" />
+        <activity android:name="com.td3.Economie.AjouterCatégorie" />
+        <activity android:name="com.td3.Economie.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,13 +23,13 @@
             </intent-filter>
         </activity>
         <receiver
-            android:name=".AlarmReceiver"
+            android:name="com.td3.Economie.classes.AlarmReceiver"
             android:enabled="true" />
         <service
-            android:name=".NotificationService"
+            android:name="com.td3.Economie.classes.NotificationService"
             android:enabled="true" />
         <activity
-            android:name=".ResultActivity"
+            android:name="com.td3.Economie.ResultActivity"
             android:excludeFromRecents="true"
             android:label="notification"
             android:launchMode="singleTask"

@@ -1,16 +1,16 @@
-package com.td3.gestionbudget.handler
+package com.td3.Economie.handler
 
-import android.content.Context
-import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteOpenHelper
 import android.content.ContentValues
+import android.content.Context
 import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
-import com.td3.gestionbudget.classes.categorie
-import com.td3.gestionbudget.classes.depensesRevenus
+import android.database.sqlite.SQLiteOpenHelper
+import com.td3.Economie.classes.categorie
+import com.td3.Economie.classes.depensesRevenus
 
 //creating the database logic, extending the SQLiteOpenHelper base class
-class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,null,DATABASE_VERSION) {
+class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
         private val DATABASE_VERSION = 1
         private val DATABASE_NAME = "BudgetDatabase"
@@ -98,7 +98,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
         val contentValues = ContentValues()
         contentValues.put(KEY_MONTANT_REVENUS, depensesRevenus.montant)
         contentValues.put(KEY_CATEGORIE_REVENUS, depensesRevenus.categorie)
-        contentValues.put(KEY_NOTE_REVENUS,depensesRevenus.note )
+        contentValues.put(KEY_NOTE_REVENUS, depensesRevenus.note)
         // Insertion des lignes
         val success = db.insert(TABLE_REVENUS, null, contentValues)
         //2nd argument is String containing nullColumnHack
@@ -109,7 +109,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
     fun afficherRevenus():List<depensesRevenus>{
         //creation d'un tableau de livres
         val listeRevenus:ArrayList<depensesRevenus> = ArrayList<depensesRevenus>()
-        val selectQuery = "SELECT  * FROM $TABLE_REVENUS"
+        val selectQuery = "SELECT  * FROM $TABLE_REVENUS order by categorieRevenus"
         val db = this.readableDatabase
         var cursor: Cursor? = null
         try{
@@ -140,7 +140,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
         val contentValues = ContentValues()
         contentValues.put(KEY_MONTANT_DEPENSES, depensesRevenus.montant)
         contentValues.put(KEY_CATEGORIE_DEPENSES, depensesRevenus.categorie)
-        contentValues.put(KEY_NOTE_DEPENSES,depensesRevenus.note )
+        contentValues.put(KEY_NOTE_DEPENSES, depensesRevenus.note)
         // Insertion des lignes
         val success = db.insert(TABLE_DEPENSES, null, contentValues)
         //2nd argument is String containing nullColumnHack
@@ -151,7 +151,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
     fun afficherDepenses():List<depensesRevenus>{
         //creation d'un tableau de livres
         val listeDepenses:ArrayList<depensesRevenus> = ArrayList<depensesRevenus>()
-        val selectQuery = "SELECT  * FROM $TABLE_DEPENSES"
+        val selectQuery = "SELECT  * FROM $TABLE_DEPENSES order by categorieDepenses"
         val db = this.readableDatabase
         var cursor: Cursor? = null
         try{
@@ -174,4 +174,37 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
         }
         return listeDepenses
     }
+
+    fun sommeRevenus():Double{
+        var total: Double = 0.0
+        val db = this.readableDatabase
+        val cursor: Cursor  = db.rawQuery("SELECT SUM(montantRevenus) as Total FROM $TABLE_REVENUS"  , null);
+
+        if (cursor.moveToFirst()) {
+            total = cursor.getDouble(cursor.getColumnIndex("Total"));// get final total
+        }
+        return total
+    }
+
+    fun sommeDepenses():Double{
+        var total: Double = 0.0
+        val db = this.readableDatabase
+        val cursor: Cursor  = db.rawQuery("SELECT SUM(montantDepenses) as Total FROM $TABLE_DEPENSES"  , null);
+
+        if (cursor.moveToFirst()) {
+            total = cursor.getDouble(cursor.getColumnIndex("Total"));// get final total
+        }
+        return total
+    }
+
+    fun supprimerRevenus(){
+        val db = this.writableDatabase
+        db.delete(TABLE_REVENUS,null,null)
+    }
+
+    fun supprimerDepenses(){
+        val db = this.writableDatabase
+        db.delete(TABLE_DEPENSES,null,null)
+    }
+
 }

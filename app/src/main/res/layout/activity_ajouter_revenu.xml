@@ -34,7 +34,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textMontany"
         app:layout_constraintTop_toBottomOf="@+id/textTitre"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/textMontany"
@@ -51,8 +52,8 @@
 
     <TextView
         android:id="@+id/textCategorie"
-        android:layout_width="126dp"
-        android:layout_height="43dp"
+        android:layout_width="141dp"
+        android:layout_height="42dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
@@ -64,8 +65,8 @@
 
     <TextView
         android:id="@+id/textNote"
-        android:layout_width="75dp"
-        android:layout_height="42dp"
+        android:layout_width="96dp"
+        android:layout_height="38dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
@@ -79,6 +80,8 @@
         android:id="@+id/listeDeroulante"
         android:layout_width="178dp"
         android:layout_height="46dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="24dp"
         android:addStatesFromChildren="false"
         android:background="@color/white"
@@ -125,34 +128,20 @@
         app:layout_constraintVertical_bias="0.229"/>
 
     <ImageButton
-        android:id="@+id/boutonModifier"
-        android:layout_width="60dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textNote"
-        app:layout_constraintStart_toEndOf="@+id/listeDeroulante"
-        app:layout_constraintTop_toBottomOf="@+id/saisieMontant"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_edit"
-        android:contentDescription="@string/bouton_de_modification" />
-
-    <ImageButton
         android:id="@+id/boutonAjouterCategorie"
         android:layout_width="54dp"
         android:layout_height="61dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="#00FFFFFF"
+        android:contentDescription="@string/btn_ajout_categorie"
         app:layout_constraintBottom_toTopOf="@+id/textNote"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/boutonModifier"
-        app:layout_constraintStart_toStartOf="@+id/boutonModifier"
+        app:layout_constraintStart_toEndOf="@+id/listeDeroulante"
         app:layout_constraintTop_toBottomOf="@+id/saisieMontant"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        android:contentDescription="@string/btn_ajout_categorie" />
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

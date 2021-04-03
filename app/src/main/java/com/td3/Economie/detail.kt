@@ -1,11 +1,11 @@
-package com.td3.gestionbudget
+package com.td3.Economie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.td3.gestionbudget.classes.MyListAdapter
-import com.td3.gestionbudget.classes.depensesRevenus
-import com.td3.gestionbudget.handler.DatabaseHandler
+import com.td3.Economie.classes.MyListAdapter
+import com.td3.Economie.classes.depensesRevenus
+import com.td3.Economie.handler.DatabaseHandler
 import kotlinx.android.synthetic.main.activity_detail.*
 
 class detail : AppCompatActivity() {

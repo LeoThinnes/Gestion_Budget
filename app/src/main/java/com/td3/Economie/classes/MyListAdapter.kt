@@ -1,11 +1,11 @@
-package com.td3.gestionbudget.classes
+package com.td3.Economie.classes
 
 import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.td3.gestionbudget.R
+import com.td3.Economie.R
 
 class MyListAdapter(private val context: Activity, private val montant: Array<String>, private val categorie: Array<String>)
     : ArrayAdapter<String>(context, R.layout.custom_list, categorie) {

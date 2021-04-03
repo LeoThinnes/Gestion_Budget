@@ -5,121 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gris"
-    tools:context=".DureeDeCycle">
-
-    <TextView
-        android:id="@+id/textTitre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/dureeCycle"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textCategorie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
-        android:text="@string/modifierDuree"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnAppliquer"
-        android:layout_width="146dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/appliquer"
-        android:textSize="15sp"
-        app:backgroundTint="@color/grisFoncé"
-        app:cornerRadius="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCategorie" />
+    tools:context=".ReinitaliserDonnees">
 
     <TextView
         android:id="@+id/textNote"
-        android:layout_width="297dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="108dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="188dp"
         android:gravity="center"
         android:text="@string/Attention"
         android:textColor="@color/rouge"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/dureeCycle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btnAppliquer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCategorie"
-        app:layout_constraintVertical_bias="0.454"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="100dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="@string/textJours"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAppliquer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/dureeCycle"
-        app:layout_constraintTop_toBottomOf="@+id/textCategorie"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/btnRéinitialiser"
-        android:layout_width="244dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="273dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="176dp"
         android:text="@string/reinitialiserCycle"
         android:textSize="15sp"
         app:backgroundTint="@color/grisFoncé"
         app:cornerRadius="15sp"
         app:layout_constraintBottom_toTopOf="@+id/textNote"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAppliquer"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintTop_toBottomOf="@+id/textRéinitialiser"
+        app:layout_constraintVertical_bias="0.733" />
 
     <TextView
         android:id="@+id/textRéinitialiser"
-        android:layout_width="268dp"
-        android:layout_height="36dp"
+        android:layout_width="324dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="52dp"
         android:gravity="center"
         android:text="@string/txtReinitialiserCycle"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnRéinitialiser"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAppliquer"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

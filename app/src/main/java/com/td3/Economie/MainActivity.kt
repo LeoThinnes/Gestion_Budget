@@ -1,16 +1,15 @@
-package com.td3.gestionbudget
+package com.td3.Economie
 
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.content.Context
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import androidx.core.app.NotificationCompat
+import com.td3.Economie.classes.NotificationUtils
+import com.td3.Economie.handler.DatabaseHandler
+import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.android.synthetic.main.activity_main.*
 //import android.support.v7.app.AppCompatActivity
 import java.util.*
 
@@ -18,7 +17,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val mNotificationTime = Calendar.getInstance().timeInMillis +  1000 //Set after 86 400 000 seconds from the current time = one day after.
+    private val mNotificationTime = Calendar.getInstance().timeInMillis +  86400000 //Set after 86 400 000 seconds from the current time = one day after.
     private var mNotified = false
 
 
@@ -57,6 +56,22 @@ class MainActivity : AppCompatActivity() {
             NotificationUtils().setNotification(mNotificationTime, this@MainActivity)
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        afficherSolde()
+    }
+
+    fun afficherSolde(){
+        val databaseHandler: DatabaseHandler = DatabaseHandler(this)
+
+        val revenus: Double = databaseHandler.sommeRevenus()
+        val depenses: Double = databaseHandler.sommeDepenses()
+
+        val solde = revenus - depenses
+        val textSolde: String = solde.toString()
+        ValeurSolde.setText(textSolde)
     }
 
 }

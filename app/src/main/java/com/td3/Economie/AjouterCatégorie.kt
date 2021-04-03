@@ -1,14 +1,15 @@
-package com.td3.gestionbudget
+package com.td3.Economie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import com.td3.gestionbudget.classes.categorie
-import com.td3.gestionbudget.handler.DatabaseHandler
+import com.td3.Economie.classes.categorie
+import com.td3.Economie.handler.DatabaseHandler
 import kotlinx.android.synthetic.main.ajoutercategorie.*
 
 class AjouterCatégorie : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ajoutercategorie)
@@ -19,7 +20,6 @@ class AjouterCatégorie : AppCompatActivity() {
         btnAjouter.setOnClickListener {
             ajouterCategorie()
         }
-
     }
 
 

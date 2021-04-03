@@ -1,42 +1,38 @@
-package com.td3.gestionbudget
+package com.td3.Economie
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
-import com.td3.gestionbudget.classes.categorie
-import com.td3.gestionbudget.classes.depensesRevenus
-import com.td3.gestionbudget.handler.DatabaseHandler
+import androidx.appcompat.app.AppCompatActivity
+import com.td3.Economie.classes.categorie
+import com.td3.Economie.classes.depensesRevenus
+import com.td3.Economie.handler.DatabaseHandler
 import kotlinx.android.synthetic.main.activity_ajout_depenses.*
 
-class ajouterRevenu : AppCompatActivity() {
+
+class ajoutDepenses : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ajouter_revenu)
+        setContentView(R.layout.activity_ajout_depenses)
         supportActionBar?.hide()
 
+
         val boutonAjouterCatégorie = findViewById<ImageButton>(R.id.boutonAjouterCategorie)
-        val boutonModifierCatégorie = findViewById<ImageButton>(R.id.boutonModifier)
         val boutonAjouter = findViewById<Button>(R.id.bouton_Ajouter)
-
         viewRecord()
-
 
         boutonAjouterCatégorie.setOnClickListener {
             val intent = Intent(this, AjouterCatégorie::class.java)
             startActivity(intent)
         }
 
-        boutonModifierCatégorie.setOnClickListener {
-            val intent = Intent(this, ModifierCatégorie::class.java)
-            startActivity(intent)
-        }
 
         boutonAjouter.setOnClickListener {
-            ajouterRevenu()
+            ajouterDepense()
         }
     }
 
@@ -50,7 +46,7 @@ class ajouterRevenu : AppCompatActivity() {
      * */
     fun viewRecord(){
         //creating the instance of DatabaseHandler class
-        val databaseHandler: DatabaseHandler = DatabaseHandler(this)
+        val databaseHandler: DatabaseHandler= DatabaseHandler(this)
         //calling the viewEmployee method of DatabaseHandler class to read the records
         val categories: List<categorie> = databaseHandler.afficherCategories()
         val ArrayLabel = Array<String>(categories.size){"null"}
@@ -66,7 +62,7 @@ class ajouterRevenu : AppCompatActivity() {
         listeDeroulante.adapter = dataAdapter
     }
 
-    fun ajouterRevenu(){
+    fun ajouterDepense(){
         //recupération des données saisies
         val montant = saisieMontant.text.toString()
         val categorie = listeDeroulante.selectedItem.toString()
@@ -75,12 +71,12 @@ class ajouterRevenu : AppCompatActivity() {
         //on controle que les champs nécessaires soient remplis
         if(montant.trim()!="" && categorie.trim()!="" && note.trim()!=""){
             //sauvegarde du liver
-                val montantBis = montant.toDouble()
-            val status = databaseHandler.ajouterRevenu(depensesRevenus(montantBis,categorie, note))
+            val montantBis = montant.toDouble()
+            val status = databaseHandler.ajouterDepense(depensesRevenus(montantBis,categorie, note))
 
             if(status > -1){
                 //affichage d'un toast pour signaler que la sauvegarde est bonne
-                Toast.makeText(applicationContext,"revenu savegardé", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"depense savegardée", Toast.LENGTH_LONG).show()
                 //remise a vide des champs de saisie
                 saisieMontant.text.clear()
                 zoneTexte.text.clear()
@@ -91,4 +87,5 @@ class ajouterRevenu : AppCompatActivity() {
         }
 
     }
+
 }
