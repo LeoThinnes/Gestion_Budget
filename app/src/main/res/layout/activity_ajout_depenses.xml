@@ -37,40 +37,43 @@
 
     <TextView
         android:id="@+id/textMontany"
-        android:layout_width="119dp"
-        android:layout_height="45dp"
+        android:layout_width="106dp"
+        android:layout_height="42dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="52dp"
+        android:gravity="center"
         android:text="@string/montant"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewList" />
 
     <TextView
         android:id="@+id/textCategorie"
-        android:layout_width="135dp"
-        android:layout_height="44dp"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
+        android:gravity="center"
         android:text="@string/categorie"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textMontany" />
 
     <TextView
         android:id="@+id/textNote"
-        android:layout_width="94dp"
-        android:layout_height="43dp"
+        android:layout_width="81dp"
+        android:layout_height="39dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
+        android:gravity="center"
         android:text="@string/note"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCategorie" />
 
@@ -123,8 +126,8 @@
 
     <ImageButton
         android:id="@+id/boutonAjouterCategorie"
-        android:layout_width="54dp"
-        android:layout_height="61dp"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"

@@ -20,40 +20,24 @@
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/ValeurSolde"
-        android:layout_width="153dp"
-        android:layout_height="57dp"
+        android:layout_width="198dp"
+        android:layout_height="54dp"
         android:layout_marginTop="160dp"
         android:gravity="center"
         android:text="@string/valeur"
         android:textColor="#090000"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toEndOf="@+id/Solde"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/logoEuro"
-        android:layout_width="33dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="160dp"
-        android:gravity="center"
-        android:text="@string/euros"
-        android:textColor="#000000"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/lienDetail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ValeurSolde"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/boutonRevenus"

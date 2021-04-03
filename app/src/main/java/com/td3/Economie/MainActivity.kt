@@ -1,7 +1,6 @@
 package com.td3.Economie
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,7 +10,6 @@ import com.td3.Economie.classes.NotificationUtils
 import com.td3.Economie.handler.DatabaseHandler
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_main.*
-//import android.support.v7.app.AppCompatActivity
 import java.util.*
 
 
@@ -77,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
         val solde = revenus - depenses
         val textSolde: String = solde.toString()
-            ValeurSolde.setText(textSolde)
+            ValeurSolde.setText(textSolde + "€")
 
     }
 

@@ -39,8 +39,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="395dp"
-        android:layout_height="227dp"
+        android:layout_width="320dp"
+        android:layout_height="188dp"
         android:layout_marginTop="20dp"
         android:background="@color/vert"
         android:orientation="vertical"
@@ -53,18 +53,20 @@
         <ListView
             android:id="@+id/listRevenus"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="191dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="395dp"
-        android:layout_height="227dp"
+        android:layout_width="319dp"
+        android:layout_height="192dp"
+        android:layout_marginBottom="28dp"
         android:background="@color/rouge"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/boutonRetour"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent">
 
         <ListView
@@ -98,7 +100,7 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:layout_constraintVertical_bias="1.0" />

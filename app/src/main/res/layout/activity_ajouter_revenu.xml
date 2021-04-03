@@ -39,40 +39,43 @@
 
     <TextView
         android:id="@+id/textMontany"
-        android:layout_width="119dp"
-        android:layout_height="45dp"
+        android:layout_width="108dp"
+        android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="52dp"
+        android:gravity="center"
         android:text="@string/montant"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTitre" />
 
     <TextView
         android:id="@+id/textCategorie"
-        android:layout_width="141dp"
-        android:layout_height="42dp"
+        android:layout_width="115dp"
+        android:layout_height="43dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
+        android:gravity="center"
         android:text="@string/categorie"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textMontany" />
 
     <TextView
         android:id="@+id/textNote"
-        android:layout_width="96dp"
+        android:layout_width="85dp"
         android:layout_height="38dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
+        android:gravity="center"
         android:text="@string/note"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCategorie" />
 
@@ -129,8 +132,8 @@
 
     <ImageButton
         android:id="@+id/boutonAjouterCategorie"
-        android:layout_width="54dp"
-        android:layout_height="61dp"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -138,7 +141,7 @@
         android:contentDescription="@string/btn_ajout_categorie"
         app:layout_constraintBottom_toTopOf="@+id/textNote"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toEndOf="@+id/listeDeroulante"
         app:layout_constraintTop_toBottomOf="@+id/saisieMontant"
         app:layout_constraintVertical_bias="0.0"
