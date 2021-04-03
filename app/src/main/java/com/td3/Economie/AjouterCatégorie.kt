@@ -22,7 +22,7 @@ class AjouterCatégorie : AppCompatActivity() {
         }
     }
 
-
+    //fonction permettant d'ajouter une nouvelle catégorie
     fun ajouterCategorie(){
         val label = nomCategorie.text.toString()
         val description = textDescription.text.toString()

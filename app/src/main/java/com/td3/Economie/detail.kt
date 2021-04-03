@@ -24,6 +24,7 @@ class detail : AppCompatActivity() {
         }
     }
 
+    //fonction permettant d'afficher les revenus sous forme de liste
     fun afficherRevenu(){
         //creating the instance of DatabaseHandler class
         val databaseHandler: DatabaseHandler = DatabaseHandler(this)
@@ -43,6 +44,7 @@ class detail : AppCompatActivity() {
         listRevenus.adapter = myListAdapter //affichage
     }
 
+    //fonction permettant d'afficher les dépenses sous forme de liste
     fun afficherDepense(){
         //creating the instance of DatabaseHandler class
         val databaseHandler: DatabaseHandler = DatabaseHandler(this)

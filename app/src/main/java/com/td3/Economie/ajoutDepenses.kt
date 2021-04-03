@@ -23,7 +23,7 @@ class ajoutDepenses : AppCompatActivity() {
 
         val boutonAjouterCatégorie = findViewById<ImageButton>(R.id.boutonAjouterCategorie)
         val boutonAjouter = findViewById<Button>(R.id.bouton_Ajouter)
-        viewRecord()
+        chargementListe()
 
         boutonAjouterCatégorie.setOnClickListener {
             val intent = Intent(this, AjouterCatégorie::class.java)
@@ -38,13 +38,13 @@ class ajoutDepenses : AppCompatActivity() {
 
     override fun onRestart() {
         super.onRestart()
-        viewRecord()
+        chargementListe()
     }
 
     /**
-     * Function to load the spinner data from SQLite database
+     * fonction permettant de charger les catégories dans la liste déroulante
      * */
-    fun viewRecord(){
+    fun chargementListe(){
         //creating the instance of DatabaseHandler class
         val databaseHandler: DatabaseHandler= DatabaseHandler(this)
         //calling the viewEmployee method of DatabaseHandler class to read the records
@@ -62,6 +62,7 @@ class ajoutDepenses : AppCompatActivity() {
         listeDeroulante.adapter = dataAdapter
     }
 
+    //fonction permettant d'ajouter une dépense
     fun ajouterDepense(){
         //recupération des données saisies
         val montant = saisieMontant.text.toString()

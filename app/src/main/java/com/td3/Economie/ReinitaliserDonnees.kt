@@ -18,6 +18,7 @@ class ReinitaliserDonnees : AppCompatActivity() {
         }
     }
 
+    //fonction qui permet la réinitialisation des données
     fun supprimerDonnees(){
         val databaseHandler: DatabaseHandler = DatabaseHandler(this)
         databaseHandler.supprimerRevenus()

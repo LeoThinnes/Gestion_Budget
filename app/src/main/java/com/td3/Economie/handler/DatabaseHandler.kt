@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper
 import com.td3.Economie.classes.categorie
 import com.td3.Economie.classes.depensesRevenus
 
-//creating the database logic, extending the SQLiteOpenHelper base class
 class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
         private val DATABASE_VERSION = 1
@@ -30,6 +29,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         private val KEY_NOTE_DEPENSES= "noteDepenses"
     }
 
+    //fonction de création des tables
     override fun onCreate(db: SQLiteDatabase?) {
         // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         //creating table with fields
@@ -42,6 +42,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         db?.execSQL(CREATE_DEPENSES_TABLE)
     }
 
+    //fonction qui gere le changement de version de la base de données
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         //  TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         db!!.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORIE_REVENU)
@@ -52,7 +53,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
     }
 
 
-    //method to insert data
+    //fonction pour ajouter une catégorie dans la bd
     fun ajouterCategorie(categorie: categorie): Long {
         val db = this.writableDatabase
         val contentValues = ContentValues()
@@ -65,7 +66,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         return success
     }
 
-    //method to read data
+    //fonction qui permet de lire les catégories en base de données.
     fun afficherCategories(): List<categorie> {
         val categorieList: ArrayList<categorie> = ArrayList<categorie>()
         val selectQuery = "SELECT  * FROM $TABLE_CATEGORIE_REVENU"
@@ -91,6 +92,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
     }
 
 
+    //fonction permmettant d'ajouter un revenu dans la bdd
     fun ajouterRevenu(depensesRevenus: depensesRevenus):Long{
         //connexion a la bd
         val db = this.writableDatabase
@@ -106,6 +108,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         return success
     }
 
+    //fonction permettant de recuperer les revenus dans la bd
     fun afficherRevenus():List<depensesRevenus>{
         //creation d'un tableau de livres
         val listeRevenus:ArrayList<depensesRevenus> = ArrayList<depensesRevenus>()
@@ -133,6 +136,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         return listeRevenus
     }
 
+    //fonction permettant d'ajouter une dépense en base de données
     fun ajouterDepense(depensesRevenus: depensesRevenus):Long{
         //connexion a la bd
         val db = this.writableDatabase
@@ -148,6 +152,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         return success
     }
 
+    //fonction permettant de recuperer les depenses dans la bd
     fun afficherDepenses():List<depensesRevenus>{
         //creation d'un tableau de livres
         val listeDepenses:ArrayList<depensesRevenus> = ArrayList<depensesRevenus>()
@@ -175,6 +180,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         return listeDepenses
     }
 
+    //fonction permettant de récupérer la somme des revenus
     fun sommeRevenus():Double{
         var total: Double = 0.0
         val db = this.readableDatabase
@@ -186,6 +192,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         return total
     }
 
+    //fonction permettant de récupérer la somme des dépenses
     fun sommeDepenses():Double{
         var total: Double = 0.0
         val db = this.readableDatabase
@@ -197,11 +204,13 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
         return total
     }
 
+    //fonction permettant de supprimer tous les revenus de la table
     fun supprimerRevenus(){
         val db = this.writableDatabase
         db.delete(TABLE_REVENUS,null,null)
     }
 
+    //fonction permettant de supprimer toutes les depenses de la table
     fun supprimerDepenses(){
         val db = this.writableDatabase
         db.delete(TABLE_DEPENSES,null,null)
